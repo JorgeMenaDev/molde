@@ -1,0 +1,9 @@
+{
+  "extends": "@journey-builder/config/tsconfig/react",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "../../.turbo/tsbuildinfo/web.tsbuildinfo",
+    "types": ["vite/client", "vitest/globals"]
+  },
+  "include": ["src", "vite.config.ts"]
+}

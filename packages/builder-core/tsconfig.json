@@ -1,0 +1,4 @@
+{
+  "extends": "@journey-builder/config/tsconfig/base",
+  "include": ["src"]
+}

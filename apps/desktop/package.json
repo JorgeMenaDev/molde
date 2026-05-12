@@ -1,0 +1,30 @@
+{
+  "name": "@journey-builder/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsup src/main.ts src/preload.ts --format cjs --platform node --no-external @journey-builder/builder-core --external electron --external better-sqlite3 --external pg",
+    "check": "tsc --noEmit && eslint .",
+    "dev": "wait-on http://127.0.0.1:5173 && electron .",
+    "rebuild:native": "electron-rebuild -f -w better-sqlite3",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@journey-builder/builder-core": "workspace:*",
+    "better-sqlite3": "^11.7.0",
+    "electron": "^34.0.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@journey-builder/config": "workspace:*",
+    "@electron/rebuild": "^3.7.2",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/pg": "^8.11.10",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.4",
+    "wait-on": "^8.0.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@journey-builder/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "check": "tsc -b && eslint .",
+    "dev": "vite --host 127.0.0.1",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@journey-builder/builder-core": "workspace:*",
+    "@journey-builder/ui": "workspace:*",
+    "@tanstack/react-table": "^8.20.6",
+    "@vitejs/plugin-react": "^4.3.4",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@journey-builder/config": "workspace:*",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vitest": "^3.2.4"
+  }
+}

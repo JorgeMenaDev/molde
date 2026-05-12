@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #18181b;
+  background: #f4f1ea;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  border-radius: 0;
+}
+
+@layer components {
+  .grid-paper {
+    background-image:
+      linear-gradient(rgba(24, 24, 27, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(24, 24, 27, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
