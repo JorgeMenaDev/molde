@@ -9,6 +9,12 @@ The first release is intentionally focused: build a form, map its fields to a
 PostgreSQL schema, preview the user-facing experience, and persist the project
 locally.
 
+## Demo
+
+Watch the desktop prototype flow:
+
+[Journey Builder desktop demo](demo/journey-builder-desktop-demo.mp4)
+
 ## What It Does
 
 - Configure form fields in a compact table-oriented editor.
