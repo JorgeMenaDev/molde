@@ -1,0 +1,5 @@
+{
+  "installCommand": "bun install",
+  "buildCommand": "bun run --filter @molde/landing build",
+  "outputDirectory": "apps/landing/dist"
+}

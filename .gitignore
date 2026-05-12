@@ -10,3 +10,5 @@ release
 apps/desktop/user-data
 apps/desktop/release
 apps/landing/public/downloads/*.dmg
+.vercel
+.env*.local

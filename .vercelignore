@@ -1,0 +1,8 @@
+node_modules
+.turbo
+apps/*/dist
+packages/*/dist
+apps/desktop/release
+apps/desktop/user-data
+apps/landing/public/downloads/*.dmg
+*.tsbuildinfo
