@@ -2,7 +2,11 @@ node_modules
 dist
 coverage
 .turbo
+.astro
+release
 .DS_Store
 *.local
 *.tsbuildinfo
 apps/desktop/user-data
+apps/desktop/release
+apps/landing/public/downloads/*.dmg

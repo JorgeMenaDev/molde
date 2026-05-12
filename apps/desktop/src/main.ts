@@ -1,10 +1,16 @@
-import { desktopIpcChannels } from "@journey-builder/builder-core";
+import { desktopIpcChannels } from "@molde/builder-core";
 import { app, BrowserWindow, ipcMain } from "electron";
 import { join } from "node:path";
 import { createProjectStore } from "./project-store";
 import { introspectPostgresSchema, testPostgresConnection } from "./postgres";
 
 const isDev = process.env.NODE_ENV === "development" || !app.isPackaged;
+const appIconPath = join(__dirname, "../assets/icon.png");
+const webEntryPath = app.isPackaged
+  ? join(process.resourcesPath, "web/dist/index.html")
+  : join(app.getAppPath(), "../web/dist/index.html");
+
+app.setName("Molde");
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -13,7 +19,8 @@ const createWindow = () => {
     minWidth: 1080,
     minHeight: 720,
     backgroundColor: "#f4f1ea",
-    title: "Journey Builder",
+    icon: appIconPath,
+    title: "Molde",
     webPreferences: {
       preload: join(__dirname, "preload.js"),
       contextIsolation: true,
@@ -30,10 +37,12 @@ const createWindow = () => {
     return;
   }
 
-  void win.loadFile(join(app.getAppPath(), "../web/dist/index.html"));
+  void win.loadFile(webEntryPath);
 };
 
 app.whenReady().then(() => {
+  if (process.platform === "darwin") app.dock?.setIcon(appIconPath);
+
   const store = createProjectStore(app.getPath("userData"));
 
   ipcMain.handle(desktopIpcChannels.postgres.testConnection, (_event, input) =>

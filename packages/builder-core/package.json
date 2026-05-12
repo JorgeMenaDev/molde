@@ -1,5 +1,5 @@
 {
-  "name": "@journey-builder/builder-core",
+  "name": "@molde/builder-core",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -19,7 +19,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@journey-builder/config": "workspace:*",
+    "@molde/config": "workspace:*",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
     "vitest": "^3.2.4"

@@ -1,7 +1,7 @@
-import type { DesktopApi } from "@journey-builder/builder-core";
+import type { DesktopApi } from "@molde/builder-core";
 
 declare global {
   interface Window {
-    journeyBuilder?: DesktopApi;
+    molde?: DesktopApi;
   }
 }

@@ -1,4 +1,6 @@
 {
   "extends": "@molde/config/tsconfig/base",
-  "include": ["src"]
+  "compilerOptions": {
+    "allowJs": true
+  }
 }

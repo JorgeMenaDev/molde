@@ -1,8 +1,8 @@
 import type {
   PgSchemaSnapshot,
   PostgresConnectionInput,
-} from "@journey-builder/builder-core";
-import { pgSchemaSnapshotSchema } from "@journey-builder/builder-core";
+} from "@molde/builder-core";
+import { pgSchemaSnapshotSchema } from "@molde/builder-core";
 import { Client } from "pg";
 
 type ColumnRow = {

@@ -1,5 +1,5 @@
 {
-  "name": "@journey-builder/config",
+  "name": "@molde/config",
   "version": "0.1.0",
   "private": true,
   "exports": {

@@ -1,4 +1,4 @@
-import { createFormDefinition } from "@journey-builder/builder-core";
+import { createFormDefinition } from "@molde/builder-core";
 import { describe, expect, it, vi } from "vitest";
 
 type FakeProject = {
@@ -74,7 +74,7 @@ vi.mock("better-sqlite3", () => ({ default: FakeDatabase }));
 describe("project store", () => {
   it("persists and loads form definitions", async () => {
     const { createProjectStore } = await import("./project-store");
-    const directory = "/tmp/journey-builder-test";
+    const directory = "/tmp/molde-test";
     const store = createProjectStore(directory);
     const form = createFormDefinition("Intake");
 

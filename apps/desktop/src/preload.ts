@@ -1,7 +1,4 @@
-import {
-  desktopIpcChannels,
-  type DesktopApi,
-} from "@journey-builder/builder-core";
+import { desktopIpcChannels, type DesktopApi } from "@molde/builder-core";
 import { contextBridge, ipcRenderer } from "electron";
 
 const api = {
@@ -20,4 +17,4 @@ const api = {
   },
 } satisfies DesktopApi;
 
-contextBridge.exposeInMainWorld("journeyBuilder", api);
+contextBridge.exposeInMainWorld("molde", api);

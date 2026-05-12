@@ -1,4 +1,4 @@
-# Content Handoff: Journey Builder Prototype
+# Content Handoff: Molde Prototype
 
 ## 1. One-line public framing
 
@@ -6,7 +6,7 @@ A coding-agent session turned a rough idea for an open-source “journey/form bu
 
 ## 2. What happened, in plain English
 
-- Built the first usable version of an open-source form builder called Journey Builder.
+- Built the first usable version of an open-source form builder called Molde.
 - The product shape is a dense two-pane workspace: spreadsheet-like field configuration on the left, live form preview on the right.
 - The first use case is form building, but the architecture leaves room for later “journey builder” use cases.
 - The web app runs as a portable React/Vite app, while the desktop app wraps it in Electron.
@@ -133,7 +133,7 @@ A coding-agent session turned a rough idea for an open-source “journey/form bu
 - Suggested post size: medium.
 - Follow-up questions for Jorge/content agent:
   - Is the repository intended to be public immediately, or should this be framed as an internal prototype?
-  - Should the product be called “Journey Builder” publicly, or is that a working name?
+  - Should the product be called “Molde” publicly, or is that a working name?
   - Can screenshots from Browser and Computer Use be used publicly?
   - Should the native Electron/SQLite debugging story be told in detail, or kept as a short lesson?
   - Is the strategic framing “forms first, journeys later” approved for public positioning?

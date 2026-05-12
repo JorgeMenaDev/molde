@@ -1,0 +1,21 @@
+{
+  "name": "@molde/landing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "astro build",
+    "check": "astro check",
+    "dev": "astro dev --host 127.0.0.1",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "bun run check"
+  },
+  "dependencies": {
+    "astro": "^6.0.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.7",
+    "@molde/config": "workspace:*",
+    "typescript": "^5.7.3"
+  }
+}

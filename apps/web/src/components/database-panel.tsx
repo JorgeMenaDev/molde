@@ -3,8 +3,8 @@ import {
   type DesktopApi,
   type PgSchemaSnapshot,
   type PostgresConnectionInput,
-} from "@journey-builder/builder-core";
-import { Button, Checkbox, Input, Label } from "@journey-builder/ui";
+} from "@molde/builder-core";
+import { Button, Checkbox, Input, Label } from "@molde/ui";
 import { Database, PlugZap } from "lucide-react";
 import { useMemo, useState } from "react";
 

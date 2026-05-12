@@ -1,5 +1,5 @@
 {
-  "extends": "@journey-builder/config/tsconfig/react",
+  "extends": "@molde/config/tsconfig/react",
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "../../.turbo/tsbuildinfo/web.tsbuildinfo",

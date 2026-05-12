@@ -1,5 +1,5 @@
 {
-  "name": "@journey-builder/web",
+  "name": "@molde/web",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,8 +10,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@journey-builder/builder-core": "workspace:*",
-    "@journey-builder/ui": "workspace:*",
+    "@molde/builder-core": "workspace:*",
+    "@molde/ui": "workspace:*",
     "@tanstack/react-table": "^8.20.6",
     "@vitejs/plugin-react": "^4.3.4",
     "lucide-react": "^0.468.0",
@@ -20,7 +20,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@journey-builder/config": "workspace:*",
+    "@molde/config": "workspace:*",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@types/react": "^19.0.7",

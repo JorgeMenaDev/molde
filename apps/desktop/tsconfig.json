@@ -1,5 +1,5 @@
 {
-  "extends": "@journey-builder/config/tsconfig/base",
+  "extends": "@molde/config/tsconfig/base",
   "compilerOptions": {
     "types": ["node"],
     "noEmit": true

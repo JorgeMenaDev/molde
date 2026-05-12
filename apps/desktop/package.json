@@ -1,27 +1,66 @@
 {
-  "name": "@journey-builder/desktop",
+  "name": "@molde/desktop",
   "version": "0.1.0",
   "private": true,
   "type": "commonjs",
+  "description": "Molde desktop app",
+  "author": "Molde contributors",
+  "productName": "Molde",
   "main": "dist/main.js",
   "scripts": {
-    "build": "tsup src/main.ts src/preload.ts --format cjs --platform node --no-external @journey-builder/builder-core --external electron --external better-sqlite3 --external pg",
+    "build": "tsup src/main.ts src/preload.ts --format cjs --platform node --no-external @molde/builder-core --external electron --external better-sqlite3 --external pg",
     "check": "tsc --noEmit && eslint .",
     "dev": "wait-on http://127.0.0.1:5173 && electron .",
+    "package:mac": "electron-builder --mac dmg --arm64 --config.mac.identity=null",
     "rebuild:native": "electron-rebuild -f -w better-sqlite3",
     "test": "vitest run"
   },
+  "build": {
+    "appId": "dev.jorgemena.molde",
+    "productName": "Molde",
+    "artifactName": "Molde-${version}-${arch}.${ext}",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "assets/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../web/dist",
+        "to": "web/dist"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "assets/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "dmg": {
+      "sign": false
+    }
+  },
   "dependencies": {
-    "@journey-builder/builder-core": "workspace:*",
+    "@molde/builder-core": "workspace:*",
     "better-sqlite3": "^11.7.0",
-    "electron": "^34.0.0",
     "pg": "^8.13.1"
   },
   "devDependencies": {
-    "@journey-builder/config": "workspace:*",
     "@electron/rebuild": "^3.7.2",
+    "@molde/config": "workspace:*",
     "@types/better-sqlite3": "^7.6.12",
     "@types/pg": "^8.11.10",
+    "electron": "^34.0.0",
+    "electron-builder": "^26.8.1",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
     "vitest": "^3.2.4",

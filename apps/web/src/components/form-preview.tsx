@@ -1,8 +1,5 @@
-import type {
-  FieldDefinition,
-  FormDefinition,
-} from "@journey-builder/builder-core";
-import { getFormIssues } from "@journey-builder/builder-core";
+import type { FieldDefinition, FormDefinition } from "@molde/builder-core";
+import { getFormIssues } from "@molde/builder-core";
 import {
   Button,
   Checkbox,
@@ -14,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
   Textarea,
-} from "@journey-builder/ui";
+} from "@molde/ui";
 
 type FormPreviewProps = {
   form: FormDefinition;

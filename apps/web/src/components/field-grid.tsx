@@ -3,7 +3,7 @@ import type {
   FieldType,
   PgColumnRef,
   PgSchemaSnapshot,
-} from "@journey-builder/builder-core";
+} from "@molde/builder-core";
 import {
   createDefaultStaticOptionSource,
   fieldTypes,
@@ -11,7 +11,7 @@ import {
   getPgColumns,
   isChoiceFieldType,
   isFieldType,
-} from "@journey-builder/builder-core";
+} from "@molde/builder-core";
 import {
   Button,
   Checkbox,
@@ -21,7 +21,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@journey-builder/ui";
+} from "@molde/ui";
 import {
   createColumnHelper,
   flexRender,

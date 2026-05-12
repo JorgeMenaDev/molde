@@ -2,7 +2,7 @@ import {
   formDefinitionSchema,
   type FormDefinition,
   type ProjectSummary,
-} from "@journey-builder/builder-core";
+} from "@molde/builder-core";
 import Database from "better-sqlite3";
 import { mkdirSync } from "node:fs";
 import { join } from "node:path";

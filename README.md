@@ -1,6 +1,6 @@
-# Journey Builder
+# Molde
 
-Journey Builder is an open-source foundation for building PostgreSQL-aware
+Molde is an open-source foundation for building PostgreSQL-aware
 forms. It gives you a dense builder workspace with a spreadsheet-like field
 sheet, live form preview, schema mapping, and a desktop boundary for local
 database access.
@@ -13,7 +13,7 @@ locally.
 
 Watch the desktop prototype flow:
 
-[Journey Builder desktop demo](demo/journey-builder-desktop-demo.mp4)
+[Molde desktop demo](demo/molde-desktop-demo.mp4)
 
 ## What It Does
 

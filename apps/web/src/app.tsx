@@ -9,15 +9,15 @@ import {
   type FieldType,
   type FormDefinition,
   type PgSchemaSnapshot,
-} from "@journey-builder/builder-core";
-import { Button, Input } from "@journey-builder/ui";
+} from "@molde/builder-core";
+import { Button, Input } from "@molde/ui";
 import { Save } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { DatabasePanel } from "./components/database-panel";
 import { FieldGrid } from "./components/field-grid";
 import { FormPreview } from "./components/form-preview";
 
-const storedFormKey = "journey-builder:last-form";
+const storedFormKey = "molde:last-form";
 
 const touchForm = (form: FormDefinition) => ({
   ...form,
@@ -27,7 +27,7 @@ const touchForm = (form: FormDefinition) => ({
 const createInitialForm = () => {
   const fallback = () => createFormDefinition("Customer intake");
 
-  if (window.journeyBuilder) return fallback();
+  if (window.molde) return fallback();
 
   try {
     const storedForm = localStorage.getItem(storedFormKey);
@@ -40,7 +40,7 @@ const createInitialForm = () => {
 };
 
 export const App = () => {
-  const desktopApi = window.journeyBuilder;
+  const desktopApi = window.molde;
   const [form, setForm] = useState<FormDefinition>(createInitialForm);
   const [schemaSnapshot, setSchemaSnapshot] = useState<PgSchemaSnapshot>(
     fixtureSchemaSnapshot,
@@ -111,9 +111,12 @@ export const App = () => {
     <main className="flex h-screen flex-col overflow-hidden bg-[#f4f1ea] text-zinc-950">
       <header className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-300 bg-white px-4 py-3">
         <div className="flex min-w-0 items-center gap-3">
-          <div className="grid h-10 w-10 place-items-center bg-zinc-950 font-mono text-sm font-bold text-amber-300">
-            JB
-          </div>
+          <img
+            src="icon-192.png"
+            alt=""
+            aria-hidden="true"
+            className="h-10 w-10 shrink-0"
+          />
           <div className="min-w-0">
             <p className="font-mono text-xs uppercase tracking-wide text-zinc-500">
               Open-source builder
