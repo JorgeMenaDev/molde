@@ -9,6 +9,12 @@ The first release is intentionally focused: build a form, map its fields to a
 PostgreSQL schema, preview the user-facing experience, and persist the project
 locally.
 
+## Links
+
+- Website: [molde-liart.vercel.app](https://molde-liart.vercel.app)
+- macOS download: [Molde 0.1.0 for Apple Silicon](https://github.com/JorgeMenaDev/molde/releases/download/v0.1.0/Molde-0.1.0-arm64.dmg)
+- Releases: [github.com/JorgeMenaDev/molde/releases](https://github.com/JorgeMenaDev/molde/releases)
+
 ## Demo
 
 Watch the desktop prototype flow:
@@ -113,7 +119,8 @@ process, preload bridge, and React UI use the same channel names and types.
 
 ## Current Status
 
-This is a working prototype/foundation, not a packaged production release.
+This is a working prototype/foundation. A macOS Apple Silicon build is available
+from the `v0.1.0` GitHub release, but the app is not yet signed or notarized.
 
 Verified locally:
 
@@ -122,10 +129,12 @@ Verified locally:
 - ESLint
 - Unit/component tests
 - Production build
+- macOS DMG download, mount, install, and launch
 
 Known next steps:
 
-- Package and sign desktop builds.
+- Sign and notarize desktop builds.
+- Add Intel macOS, Windows, and Linux artifacts.
 - Exercise live PostgreSQL introspection against more real schemas.
 - Add project management views beyond latest-project loading.
 - Expand field configuration and option-source editing.
