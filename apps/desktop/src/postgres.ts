@@ -1,3 +1,4 @@
+import { checkServerIdentity } from "node:tls";
 import type {
   PgSchemaSnapshot,
   PostgresConnectionInput,
@@ -65,7 +66,13 @@ const createClient = (input: PostgresConnectionInput) =>
     database: input.database,
     user: input.user,
     password: input.password,
-    ssl: input.ssl ? { rejectUnauthorized: false } : undefined,
+    ssl: input.ssl
+      ? {
+          rejectUnauthorized: true,
+          checkServerIdentity: (_hostname, certificate) =>
+            checkServerIdentity(input.host, certificate),
+        }
+      : undefined,
   });
 
 export const buildSchemaSnapshot = (

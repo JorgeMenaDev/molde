@@ -127,7 +127,7 @@ export const DatabasePanel = ({
                   updateConnection({ ssl: checked === true })
                 }
               />
-              SSL
+              SSL (verify certificate)
             </label>
           </div>
           <p className="mt-2 text-xs text-zinc-400">{status}</p>
