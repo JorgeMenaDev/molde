@@ -114,6 +114,11 @@ The desktop app exposes a typed preload bridge:
 - `projects.save`
 - `projects.delete`
 
+When SSL is enabled, PostgreSQL connections verify the server certificate and
+hostname. For a private certificate authority, start Molde with
+`NODE_EXTRA_CA_CERTS=/path/to/ca.pem`; do not disable certificate verification.
+Certificate errors appear in the connection result.
+
 The shared contract lives in `packages/builder-core`, so the Electron main
 process, preload bridge, and React UI use the same channel names and types.
 
